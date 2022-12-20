@@ -48,7 +48,6 @@ class Demo
             {
                 float gravity = 0.1;
                 float accelerationModifier = 0.03;
-                float bounceVelocity = 0;
             };
 
             struct Vars
@@ -165,9 +164,7 @@ class Demo
                 //collision
                 if (this->arduboy.collide(ballHitbox, trampolineHitbox))
                 {
-                    this->physics.bounceVelocity = this->ball.yVelocity;
-                    this->ball.yVelocity = 0;
-                    this->ball.yVelocity -= this->physics.bounceVelocity; 
+                    this->ball.yVelocity = -this->ball.yVelocity; 
                 }
             }
 
