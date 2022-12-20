@@ -153,11 +153,11 @@ class Demo
                     this->ball.yVelocity = 0;
                 }
 
-                //adding velocity to the position
-                this->ball.y = (this->ball.y + this->ball.yVelocity);
-
                 //simulating gravity
                 this->ball.yVelocity += this->physics.gravity;
+
+                //adding velocity to the position
+                this->ball.y += this->ball.yVelocity;
 
                 Rect ballHitbox(this->ball.x, this->ball.y, this->ball.width, this->ball.height);
                 Rect trampolineHitbox(48, 57, 32, 7);
