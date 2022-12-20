@@ -159,9 +159,6 @@ class Demo
                 //simulating gravity
                 this->ball.yVelocity += this->physics.gravity;
 
-                //acceleration of the ball
-                this->ball.yVelocity += (this->ball.yVelocity * this->physics.accelerationModifier);
-
                 Rect ballHitbox(this->ball.x, this->ball.y, this->ball.width, this->ball.height);
                 Rect trampolineHitbox(48, 57, 32, 7);
 
